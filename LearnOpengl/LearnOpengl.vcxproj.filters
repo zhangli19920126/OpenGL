@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="practice\01gettting_started\hello_triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="locallibs\stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LibraryOrigin\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\01gettting_started\hello_triangle_exercise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\01gettting_started\textures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\01gettting_started\camera_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\02lighting\1.colors\colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\02lighting\2.phong\01PhongLight\phonglighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\02lighting\2.phong\02LightMap\lightmaplighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\03lighttypes\directionlight\directionlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\03lighttypes\pointlight\pointlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\03lighttypes\spotlight\spotlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\04model\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="locallibs\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="locallibs\shader_s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="locallibs\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="locallibs\mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="locallibs\model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="practice\01gettting_started\texture.fs" />
+    <None Include="practice\01gettting_started\texture.vs" />
+    <None Include="practice\01gettting_started\camera.fs" />
+    <None Include="practice\01gettting_started\camera.vs" />
+    <None Include="practice\02lighting\1.colors\1.colors.fs" />
+    <None Include="practice\02lighting\1.colors\1.colors.vs" />
+    <None Include="practice\02lighting\1.colors\1.light_cube.fs" />
+    <None Include="practice\02lighting\1.colors\1.light_cube.vs" />
+    <None Include="practice\02lighting\2.phong\01PhongLight\phong_light.vs" />
+    <None Include="practice\02lighting\2.phong\01PhongLight\phong_light.fs" />
+    <None Include="practice\02lighting\2.phong\02LightMap\lightmap.fs" />
+    <None Include="practice\02lighting\2.phong\02LightMap\lightmap.vs" />
+    <None Include="practice\03lighttypes\directionlight\directionlight.vs" />
+    <None Include="practice\03lighttypes\directionlight\directionlight.fs" />
+    <None Include="practice\03lighttypes\pointlight\pointlight.vs" />
+    <None Include="practice\03lighttypes\pointlight\pointlight.fs" />
+    <None Include="practice\03lighttypes\spotlight\spot_light.vs" />
+    <None Include="practice\03lighttypes\spotlight\spot_light.fs" />
+    <None Include="practice\04model\1.model_loading.fs" />
+    <None Include="practice\04model\1.model_loading.vs" />
+  </ItemGroup>
+</Project>
