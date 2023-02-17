@@ -146,6 +146,7 @@
 //    glDeleteVertexArrays(1, &VAO);
 //    glDeleteBuffers(1, &VBO);
 //    glDeleteBuffers(1, &EBO);
+//    ourShader.clear();
 //
 //    // glfw: terminate, clearing all previously allocated GLFW resources.
 //    // ------------------------------------------------------------------
