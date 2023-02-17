@@ -2,4 +2,11 @@
 .vs/*
 LearnOpengl/.vs/*
 LearnOpengl/x64/*
+LearnOpengl/imgui.ini
+LibraryOrigin/glfw-3.3.8/out/
+OpenGlLibrary/include/glm/out/
 *.sln
+*.vcxproj
+*.filters
+*.user
+
