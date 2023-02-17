@@ -1,0 +1,5 @@
+
+.vs/*
+LearnOpengl/.vs/*
+LearnOpengl/x64/*
+*.sln
