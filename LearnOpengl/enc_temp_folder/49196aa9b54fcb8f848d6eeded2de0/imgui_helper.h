@@ -64,7 +64,6 @@ public:
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }
 
-
     void guiClear()
     {
         ImGui_ImplOpenGL3_Shutdown();
