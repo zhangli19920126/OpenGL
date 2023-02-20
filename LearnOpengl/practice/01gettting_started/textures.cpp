@@ -136,7 +136,10 @@
 //        glBindVertexArray(VAO);
 //        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 //
-//        imguiHelper.guiRender1F(&mixValue, 0, 1, "mixValue:");
+//        imguiHelper.guiRenderBengin();
+//        ImGui::SliderFloat("mixValue", &mixValue, 0, 2);
+//        imguiHelper.guiRenderEnd();
+//  
 //
 //        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 //        glfwSwapBuffers(window);

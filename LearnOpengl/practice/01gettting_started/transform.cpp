@@ -136,7 +136,10 @@
 //        glBindVertexArray(VAO);
 //        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 //
-//        imguiHelper.guiRenderTrans(&rotation, &scale);
+//        imguiHelper.guiRenderBengin();
+//        ImGui::SliderFloat("camera x", &rotation, 0, 360);
+//        ImGui::SliderFloat("camera Z", &scale, 0, 2);
+//        imguiHelper.guiRenderEnd();
 //
 //        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 //        glfwSwapBuffers(window);

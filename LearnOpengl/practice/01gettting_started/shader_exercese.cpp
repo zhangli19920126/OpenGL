@@ -115,7 +115,11 @@
 //        glBindVertexArray(VAOs[1]);
 //        glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, (void*)(0 * sizeof(float)));
 //
-//        imguiHelper.guiRender(&r,&g,&b,&a);
+//        imguiHelper.guiRenderBengin();
+//        ImGui::SliderFloat("red", &r, 0, 1);
+//        ImGui::SliderFloat("green", &g, 0, 1);
+//        ImGui::SliderFloat("blue", &b, 0, 1);
+//        imguiHelper.guiRenderEnd();
 //
 //        glfwSwapBuffers(window);
 //        glfwPollEvents();
