@@ -19,10 +19,7 @@
 //
 //float mixValue = 0.4f;
 //float rotation = 90.0f;
-//float rotationTrs = 90.0f;
 //float scale = 1.0f;
-//float scaleTrs = 1.0f;
-//bool revesalSequence = false;
 //
 //ImgLoader imgLoader;
 //ImguiHelper imguiHelper;
@@ -61,7 +58,7 @@
 //    imguiHelper.bindGui(window, true);
 //
 //    // build and compile shader program
-//    Shader ourShader("practice/01gettting_started/texture.vs", "practice/01gettting_started/texture.fs");
+//    Shader ourShader("practice/01gettting_started/transform.vs", "practice/01gettting_started/transform.fs");
 //
 //    float vertices[] = {
 //        // positions          // colors           // texture coords
@@ -113,14 +110,6 @@
 //    ourShader.setInt("texture1", 0);
 //    ourShader.setInt("texture2", 1);
 //    ourShader.setFloat("mixValue", mixValue);
-//
-//    glm::mat4 trans;
-//    trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
-//    trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
-//
-//    ourShader.setMat4("transform", trans);
-//    unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
-//    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 //    
 //
 //    // render loop
@@ -139,22 +128,15 @@
 //        glActiveTexture(GL_TEXTURE1);
 //        glBindTexture(GL_TEXTURE_2D, texture2);
 //
+//        glm::mat4 trans;
 //        trans = glm::rotate(trans, glm::radians(rotation), glm::vec3(0.0, 0.0, 1.0));
 //        trans = glm::scale(trans, glm::vec3(scale, scale, scale));
+//        ourShader.setMat4Ptr("transform", glm::value_ptr(trans));
 //
-//        // render container
-//        ourShader.setFloat("mixValue", mixValue);
 //        glBindVertexArray(VAO);
 //        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 //
-//        imguiHelper.guiRenderTrans(&rotationTrs, &scaleTrs);
-//
-//        if (rotation != rotationTrs || scale != scaleTrs) 
-//        {
-//            rotation = rotationTrs;
-//            scale = scaleTrs;
-//            ourShader.setMat4Ptr("transform", glm::value_ptr(trans));
-//        }
+//        imguiHelper.guiRenderTrans(&rotation, &scale);
 //
 //        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 //        glfwSwapBuffers(window);
