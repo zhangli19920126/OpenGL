@@ -64,6 +64,25 @@ public:
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }
 
+    void guiRenderTrans(float* rotation, float *scale)
+    {
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        {
+
+            ImGui::Begin("GUI");
+            ImGui::SameLine();
+            ImGui::SliderFloat("rotation", rotation, 0.0f, 360.0f);
+            ImGui::SliderFloat("scale", scale, 0.0f, 1.0f);
+            ImGui::End();
+        }
+
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    }
+
 
     void guiClear()
     {
