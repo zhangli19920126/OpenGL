@@ -4,9 +4,9 @@
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
 //#include <iostream>
-//#include "../../../locallibs/stb_image.h"
-//#include "../../../locallibs/shader_s.h"
-//#include "../../../locallibs/camera.h"
+//#include "../../../../locallibs/stb_image.h"
+//#include "../../../../locallibs/shader_s.h"
+//#include "../../../../locallibs/camera.h"
 //
 //void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -75,7 +75,8 @@
 //
 //    // build and compile our shader zprogram
 //    // ------------------------------------
-//    Shader lightingShader("practice/03lighttypes/spotlight/spot_light.vs", "practice/03lighttypes/spotlight/spot_light.fs");
+//    Shader lightingShader("practice/03lighttypes/pointlight/pointlight.vs", "practice/03lighttypes/pointlight/pointlight.fs");
+//    Shader lightCubeShader("practice/02lighting/1.colors/1.light_cube.vs", "practice/02lighting/1.colors/1.light_cube.fs");
 //
 //    // set up vertex data (and buffer(s)) and configure vertex attributes
 //    // ------------------------------------------------------------------
@@ -152,6 +153,16 @@
 //    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 //    glEnableVertexAttribArray(2);
 //
+//    // second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
+//    unsigned int lightCubeVAO;
+//    glGenVertexArrays(1, &lightCubeVAO);
+//    glBindVertexArray(lightCubeVAO);
+//
+//    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+//    // note that we update the lamp's position attribute's stride to reflect the updated buffer data
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+//    glEnableVertexAttribArray(0);
+//
 //    // load textures (we now use a utility function to keep the code more organized)
 //    // -----------------------------------------------------------------------------
 //    unsigned int diffuseMap = loadTexture("resources/textures/container2.png");
@@ -185,19 +196,16 @@
 //
 //        // be sure to activate shader when setting uniforms/drawing objects
 //        lightingShader.use();
+//        lightingShader.setVec3("light.position", lightPos);
 //        lightingShader.setVec3("viewPos", camera.Position);
 //
 //        // light properties
 //        lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-//        lightingShader.setVec3("light.diffuse", 1.0f, 1.0f, 1.0f);
+//        lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 //        lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 //        lightingShader.setFloat("light.constant", 1.0f);
 //        lightingShader.setFloat("light.linear", 0.09f);
 //        lightingShader.setFloat("light.quadratic", 0.032f);
-//        lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(1.3f)));
-//        lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(5.5f)));
-//        lightingShader.setVec3("light.position", camera.Position);
-//        lightingShader.setVec3("light.direction", camera.Front);
 //
 //        // material properties
 //        lightingShader.setFloat("material.shininess", 32.0f);
@@ -226,12 +234,26 @@
 //            // calculate the model matrix for each object and pass it to shader before drawing
 //            glm::mat4 model = glm::mat4(1.0f);
 //            model = glm::translate(model, cubePositions[i]);
-//            float angle = 20.0f * (i + 1) * static_cast<float>(glfwGetTime());
+//            float angle = 20.0f * i;
 //            model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 //            lightingShader.setMat4("model", model);
 //
 //            glDrawArrays(GL_TRIANGLES, 0, 36);
 //        }
+//
+//
+//        // also draw the lamp object
+//        lightCubeShader.use();
+//        lightCubeShader.setMat4("projection", projection);
+//        lightCubeShader.setMat4("view", view);
+//        model = glm::mat4(1.0f);
+//        model = glm::translate(model, lightPos);
+//        model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+//        lightCubeShader.setMat4("model", model);
+//
+//        glBindVertexArray(lightCubeVAO);
+//        glDrawArrays(GL_TRIANGLES, 0, 36);
+//
 //
 //        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 //        // -------------------------------------------------------------------------------
@@ -242,6 +264,7 @@
 //    // optional: de-allocate all resources once they've outlived their purpose:
 //    // ------------------------------------------------------------------------
 //    glDeleteVertexArrays(1, &cubeVAO);
+//    glDeleteVertexArrays(1, &lightCubeVAO);
 //    glDeleteBuffers(1, &VBO);
 //
 //    // glfw: terminate, clearing all previously allocated GLFW resources.
@@ -280,7 +303,7 @@
 //// -------------------------------------------------------
 //void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 //{
-//    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1) != GLFW_PRESS)
+//    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1) != GLFW_PRESS) 
 //    {
 //        return;
 //    }
