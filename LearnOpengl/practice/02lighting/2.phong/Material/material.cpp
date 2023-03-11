@@ -83,7 +83,7 @@
 //
 //    // build and compile our shader zprogram
 //    // ------------------------------------
-//    Shader lightingShader("practice/02lighting/2.phong/01PhongLight/phong_comprehensive.vs", "practice/02lighting/2.phong/01PhongLight/phong_comprehensive.fs");
+//    Shader lightingShader("practice/02lighting/2.phong/Material/material.vs", "practice/02lighting/2.phong/Material/material.fs");
 //    Shader lightCubeShader("practice/02lighting/1.colors/1.light_cube.vs", "practice/02lighting/1.colors/1.light_cube.fs");
 //
 //    float vertices[] = {
