@@ -222,12 +222,12 @@ int main()
 
         ////set light data
         lightingShader.setVec3("light.color", glm::vec3(lightCol[0], lightCol[1], lightCol[2]));
-        //lightingShader.setVec3("light.position", glm::vec3(lightPos[0], lightPos[1], lightPos[2]));
-        lightingShader.setVec3("light.position", camera.Position);
-        //lightingShader.setVec3("light.direction", glm::vec3(lightDir[0], lightDir[1], lightDir[2]));
-        lightingShader.setVec3("light.direction", camera.Front);
-        lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(lightCutoff)));// cos(lightCutoff));
-        lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(lightOutCutoff)));// cos(lightCutoff));
+        lightingShader.setVec3("light.position", glm::vec3(lightPos[0], lightPos[1], lightPos[2]));
+        //lightingShader.setVec3("light.position", camera.Position);
+        lightingShader.setVec3("light.direction", glm::vec3(lightDir[0], lightDir[1], lightDir[2]));
+        //lightingShader.setVec3("light.direction", camera.Front);
+        lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(lightCutoff)));
+        lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(lightOutCutoff)));
         lightingShader.setFloat("light.constant", constant);
         lightingShader.setFloat("light.linear", linear);
         lightingShader.setFloat("light.quadratic", quadratic);

@@ -58,6 +58,6 @@ void main()
      float specularShiness = pow(max(dot(half, norm), 0.0), material.shininess);
      vec3 specular = specularShiness * specularColor * lightColor * material.specular;
 
-     vec3 finalColor = (diffuse + specular) * intensity + ambient;
+     vec3 finalColor = (diffuse + specular + emissionColor) * intensity + ambient;
      FragColor = vec4(finalColor, 1.0);
 } 
