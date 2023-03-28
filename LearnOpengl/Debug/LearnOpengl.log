@@ -1,0 +1,33 @@
+﻿  glad.c
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  camera_class.cpp
+  camera_exercise.cpp
+  exercise.cpp
+  hello_triangle.cpp
+  stb_image.cpp
+  hello_triangle_exercise.cpp
+  mvp.cpp
+  shader_exercese.cpp
+  textures.cpp
+  transform.cpp
+  colors.cpp
+  phong_comprehensive.cpp
+  phong_diffuse.cpp
+  Generating Code...
+  Compiling...
+  phong_specular.cpp
+  lightmaplighting.cpp
+  material.cpp
+  comprehensive.cpp
+  directionlight.cpp
+  pointlight.cpp
+  spotlight.cpp
+  model.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'opengl32.lib'

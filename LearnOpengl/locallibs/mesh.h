@@ -31,16 +31,16 @@ struct Vertex {
 struct Texture {
     unsigned int id;
     string type;
-    aiString path;
+    string path;
 };
 
 class Mesh {
 public:
     // mesh Data
-    vector<Vertex>       vertices;  //顶点数组
-    vector<unsigned int> indices;   //顶点索引
-    vector<Texture>      textures;  //贴图
-    unsigned int VAO;               //顶点属性信息
+    vector<Vertex>       vertices;
+    vector<unsigned int> indices;
+    vector<Texture>      textures;
+    unsigned int VAO;
 
     // constructor
     Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
@@ -61,16 +61,12 @@ public:
         unsigned int specularNr = 1;
         unsigned int normalNr = 1;
         unsigned int heightNr = 1;
-
         for (unsigned int i = 0; i < textures.size(); i++)
         {
-            // active proper texture unit before binding
-            glActiveTexture(GL_TEXTURE0 + i); 
-
+            glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
             // retrieve texture number (the N in diffuse_textureN)
             string number;
             string name = textures[i].type;
-
             if (name == "texture_diffuse")
                 number = std::to_string(diffuseNr++);
             else if (name == "texture_specular")
