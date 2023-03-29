@@ -177,7 +177,7 @@
     <ClCompile Include="practice\02lighting\3.lighttypes\directionlight\directionlight.cpp" />
     <ClCompile Include="practice\02lighting\3.lighttypes\pointlight\pointlight.cpp" />
     <ClCompile Include="practice\02lighting\3.lighttypes\spotlight\spotlight.cpp" />
-    <ClCompile Include="practice\03model\model.cpp" />
+    <ClCompile Include="practice\03model\model_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\camera.h" />
@@ -231,6 +231,7 @@
     <None Include="practice\02lighting\3.lighttypes\spotlight\spot_light.vs" />
     <None Include="practice\03model\1.model_loading.fs" />
     <None Include="practice\03model\1.model_loading.vs" />
+    <None Include="practice\03model\model_comprehensive.fs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
