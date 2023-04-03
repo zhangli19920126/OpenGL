@@ -178,6 +178,8 @@
     <ClCompile Include="practice\02lighting\3.lighttypes\pointlight\pointlight.cpp" />
     <ClCompile Include="practice\02lighting\3.lighttypes\spotlight\spotlight.cpp" />
     <ClCompile Include="practice\03model\model_test.cpp" />
+    <ClCompile Include="practice\04advanced\01depth_test\depth.cpp" />
+    <ClCompile Include="practice\04advanced\02stencil_test\stencil_outline.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\camera.h" />
@@ -232,6 +234,12 @@
     <None Include="practice\03model\1.model_loading.fs" />
     <None Include="practice\03model\1.model_loading.vs" />
     <None Include="practice\03model\model_comprehensive.fs" />
+    <None Include="practice\04advanced\01depth_test\depth.fs" />
+    <None Include="practice\04advanced\01depth_test\depth.vs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline.fs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline.vs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline_model.fs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline_model.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

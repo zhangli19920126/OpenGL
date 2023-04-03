@@ -102,6 +102,12 @@
     <ClCompile Include="practice\03model\model_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="practice\04advanced\01depth_test\depth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\04advanced\02stencil_test\stencil_outline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\stb_image.h">
@@ -190,5 +196,11 @@
     <None Include="practice\02lighting\2.phong\Material\material.vs" />
     <None Include="practice\02lighting\2.phong\Material\material.fs" />
     <None Include="practice\03model\model_comprehensive.fs" />
+    <None Include="practice\04advanced\01depth_test\depth.vs" />
+    <None Include="practice\04advanced\01depth_test\depth.fs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline.vs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline.fs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline_model.fs" />
+    <None Include="practice\04advanced\02stencil_test\stencil_outline_model.vs" />
   </ItemGroup>
 </Project>
