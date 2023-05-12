@@ -180,6 +180,8 @@
     <ClCompile Include="practice\03model\model_test.cpp" />
     <ClCompile Include="practice\04advanced\01depth_test\depth.cpp" />
     <ClCompile Include="practice\04advanced\02stencil_test\stencil_outline.cpp" />
+    <ClCompile Include="practice\04advanced\03blend\blend.cpp" />
+    <ClCompile Include="practice\04advanced\03blend\clip.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\camera.h" />
@@ -240,6 +242,10 @@
     <None Include="practice\04advanced\02stencil_test\stencil_outline.vs" />
     <None Include="practice\04advanced\02stencil_test\stencil_outline_model.fs" />
     <None Include="practice\04advanced\02stencil_test\stencil_outline_model.vs" />
+    <None Include="practice\04advanced\03blend\blend.fs" />
+    <None Include="practice\04advanced\03blend\blend.vs" />
+    <None Include="practice\04advanced\03blend\clip.fs" />
+    <None Include="practice\04advanced\03blend\clip.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

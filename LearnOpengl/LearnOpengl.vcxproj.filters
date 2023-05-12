@@ -108,6 +108,12 @@
     <ClCompile Include="practice\04advanced\02stencil_test\stencil_outline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="practice\04advanced\03blend\clip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\04advanced\03blend\blend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\stb_image.h">
@@ -202,5 +208,9 @@
     <None Include="practice\04advanced\02stencil_test\stencil_outline.fs" />
     <None Include="practice\04advanced\02stencil_test\stencil_outline_model.fs" />
     <None Include="practice\04advanced\02stencil_test\stencil_outline_model.vs" />
+    <None Include="practice\04advanced\03blend\clip.vs" />
+    <None Include="practice\04advanced\03blend\clip.fs" />
+    <None Include="practice\04advanced\03blend\blend.vs" />
+    <None Include="practice\04advanced\03blend\blend.fs" />
   </ItemGroup>
 </Project>
