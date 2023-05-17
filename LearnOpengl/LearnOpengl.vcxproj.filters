@@ -114,6 +114,12 @@
     <ClCompile Include="practice\04advanced\03blend\blend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="practice\04advanced\04face_culling\face_cull.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\04advanced\05frame_buffer\01frame_buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\stb_image.h">
@@ -212,5 +218,11 @@
     <None Include="practice\04advanced\03blend\clip.fs" />
     <None Include="practice\04advanced\03blend\blend.vs" />
     <None Include="practice\04advanced\03blend\blend.fs" />
+    <None Include="practice\04advanced\04face_culling\face_cull.vs" />
+    <None Include="practice\04advanced\04face_culling\face_cull.fs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer.fs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer.vs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.fs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.vs" />
   </ItemGroup>
 </Project>

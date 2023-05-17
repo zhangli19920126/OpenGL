@@ -182,6 +182,8 @@
     <ClCompile Include="practice\04advanced\02stencil_test\stencil_outline.cpp" />
     <ClCompile Include="practice\04advanced\03blend\blend.cpp" />
     <ClCompile Include="practice\04advanced\03blend\clip.cpp" />
+    <ClCompile Include="practice\04advanced\04face_culling\face_cull.cpp" />
+    <ClCompile Include="practice\04advanced\05frame_buffer\01frame_buffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\camera.h" />
@@ -246,6 +248,12 @@
     <None Include="practice\04advanced\03blend\blend.vs" />
     <None Include="practice\04advanced\03blend\clip.fs" />
     <None Include="practice\04advanced\03blend\clip.vs" />
+    <None Include="practice\04advanced\04face_culling\face_cull.fs" />
+    <None Include="practice\04advanced\04face_culling\face_cull.vs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer.fs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer.vs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.fs" />
+    <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
