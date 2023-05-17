@@ -184,6 +184,8 @@
     <ClCompile Include="practice\04advanced\03blend\clip.cpp" />
     <ClCompile Include="practice\04advanced\04face_culling\face_cull.cpp" />
     <ClCompile Include="practice\04advanced\05frame_buffer\01frame_buffer.cpp" />
+    <ClCompile Include="practice\04advanced\06cubemaps\cubemaps.cpp" />
+    <ClCompile Include="practice\04advanced\06cubemaps\reflection\reflection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\camera.h" />
@@ -254,6 +256,12 @@
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer.vs" />
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.fs" />
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.vs" />
+    <None Include="practice\04advanced\06cubemaps\reflection\reflection.fs" />
+    <None Include="practice\04advanced\06cubemaps\reflection\reflection.vs" />
+    <None Include="practice\04advanced\06cubemaps\scene.fs" />
+    <None Include="practice\04advanced\06cubemaps\scene.vs" />
+    <None Include="practice\04advanced\06cubemaps\skybox.fs" />
+    <None Include="practice\04advanced\06cubemaps\skybox.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -120,6 +120,12 @@
     <ClCompile Include="practice\04advanced\05frame_buffer\01frame_buffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="practice\04advanced\06cubemaps\cubemaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="practice\04advanced\06cubemaps\reflection\reflection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="locallibs\stb_image.h">
@@ -224,5 +230,11 @@
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer.vs" />
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.fs" />
     <None Include="practice\04advanced\05frame_buffer\01frame_buffer_screen.vs" />
+    <None Include="practice\04advanced\06cubemaps\scene.vs" />
+    <None Include="practice\04advanced\06cubemaps\scene.fs" />
+    <None Include="practice\04advanced\06cubemaps\skybox.vs" />
+    <None Include="practice\04advanced\06cubemaps\skybox.fs" />
+    <None Include="practice\04advanced\06cubemaps\reflection\reflection.vs" />
+    <None Include="practice\04advanced\06cubemaps\reflection\reflection.fs" />
   </ItemGroup>
 </Project>
